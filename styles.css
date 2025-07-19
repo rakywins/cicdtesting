@@ -1,0 +1,9 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+.banner {
+  background-image: url('banner.jpg');
+  background-size: cover;
+  height: 250px;
+}

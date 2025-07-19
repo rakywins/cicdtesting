@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Supermarket Inventory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="banner"></div>
+  <h1>Welcome to SuperMart</h1>
+  <div id="inventory"></div>
+
+  <script>
+    fetch('inventory.json')
+      .then(response => response.json())
+      .then(data => {
+        const div = document.getElementById("inventory");
+        data.items.forEach(item => {
+          div.innerHTML += `<p><strong>${item.name}</strong>: ₹${item.price}</p>`;
+        });
+      });
+  </script>
+</body>
+</html>
